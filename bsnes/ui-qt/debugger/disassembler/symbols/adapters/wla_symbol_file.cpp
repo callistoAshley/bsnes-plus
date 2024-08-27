@@ -118,6 +118,11 @@ string WlaSymbolFile::writeAddress(uint32_t address) const {
   return string(hex<2,'0'>(address>>16), ":" , hex<4,'0'>(address&0xFFFF));
 }
 
+extern "C" {
+#include "stdio.h"
+#include "stdlib.h"
+}
+
 // ------------------------------------------------------------------------
 bool WlaSymbolFile::write(nall::file &f, SymbolMap *map) const {
   uint32_t i;
@@ -135,7 +140,7 @@ bool WlaSymbolFile::write(nall::file &f, SymbolMap *map) const {
   f.print("\n");
   f.print("[comments]\n");
   foreach(symbols, map->symbols) {
-    s = map->symbols[i].getComment();
+    s = symbols.getComment();
     if (!s.isInvalid()) {
       f.print(writeAddress(symbols.address), " ", s.name, "\n");
     }
