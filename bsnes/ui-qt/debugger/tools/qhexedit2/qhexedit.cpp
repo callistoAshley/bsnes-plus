@@ -722,10 +722,10 @@ void QHexEdit::paintEvent(QPaintEvent *event)
         // paint hex and ascii area
         QPen colStandard = QPen(viewport()->palette().color(QPalette::WindowText));
         // TODO: make these configurable
-        QPen colUsageRead   = QPen(QColor(0, 0, 224));
-        QPen colUsageWrite  = QPen(QColor(0, 0, 224));
-        QPen colUsageExec   = QPen(QColor(224, 0, 0));
-        QPen colUsageRWExec = QPen(QColor(224, 0, 224));
+        QPen colUsageRead   = QPen(QColor(0, 108, 224));
+        QPen colUsageWrite  = QPen(QColor(0, 108, 224));
+        QPen colUsageExec   = QPen(QColor(0xde, 0x3e, 0x3e));
+        QPen colUsageRWExec = QPen(QColor(224, 0x3a, 224));
 
         painter.setBackgroundMode(Qt::TransparentMode);
 

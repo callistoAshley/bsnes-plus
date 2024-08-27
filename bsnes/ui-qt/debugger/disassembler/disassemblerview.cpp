@@ -512,9 +512,9 @@ void DisassemblerView::paintOpcode(QPainter &painter, RenderableDisassemblerLine
 
     addressColor = Qt::gray;
     textColor = viewport()->palette().color(QPalette::WindowText);
-    opColor = QColor(0x00, 0x00, 0x88, 0xff);
-    paramImmediateColor = QColor(0x00, 0x88, 0x00, 0xff);
-    paramAddressColor = QColor(0x88, 0x00, 0x00, 0xff);
+    opColor = QColor(0x00, 0xff, 0xff, 0xff);
+    paramImmediateColor = QColor(0x00, 0xff, 0x00, 0xff);
+    paramAddressColor = QColor(0xff, 0x45, 0x45, 0xff);
     paramSymbolColor = QColor(0xFF, 0x00, 0x00, 0xff);
   }
 
